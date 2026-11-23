@@ -51,7 +51,7 @@ install.packages(c("tidyverse", "scales", "ggrepel"))
 
 ### Paso manual
 
-1. Descargar la [la base del Atlas](https://atlas.hks.harvard.edu/data-downloads).
+1. Descargar la base sitc_country_product_year_4.csv desde [este link](https://atlas.hks.harvard.edu/data-downloads/).
 2. Guardarlo en la carpeta `raw/` con el nombre `sitc_country_product_year_4.csv`.
 
 ### Orden de ejecución
