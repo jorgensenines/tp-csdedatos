@@ -12,7 +12,7 @@ Describir la estructura exportadora de 19 países de América Latina y analizar 
 
 ## Base:
 
-- **Fuente:** [Atlas de Complejidad Económica, Growth Lab, Harvard](https://atlas.hks.harvard.edu/data-downloads)
+- **Fuente:** [Atlas de Complejidad Económica. Growth Lab, Harvard](https://atlas.hks.harvard.edu/data-downloads/)
 - **Clasificación:** SITC Rev. 2, 4 dígitos
 - **Unidad de observación:** país × producto × año
 - **Recorte utilizado:** 19 países de América Latina, 1970–2024 
