@@ -1,0 +1,5 @@
+﻿"test";"estadistico";"gl";"p_valor";"tamanio_efecto"
+"Shapiro-Wilk (residuos)";"W = 0.962";"—";"0.000453";"—"
+"Levene";"F = 2.06";"5 y 141";"0.0734";"—"
+"ANOVA";"F = 16.69";"5 y 141";"6.28e-13";"η² = 0.37"
+"Kruskal-Wallis";"χ² = 54.12";"5";"1.98e-10";"ε² = 0.37"
