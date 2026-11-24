@@ -52,12 +52,15 @@ El análisis se desarrolló en Google Colab, con R. Los scripts también se pued
 ### Paso manual: descarga de la base
 
 La base es demasiado grande para subirla a GitHub (521,9 MB). Descargar el archivo `sitc_country_product_year_4.csv` desde [este link de Drive](https://drive.google.com/file/d/1l6mz0B7js6X0esEcms8PTiFkLuNlFt4v/view?usp=drive_link), que es una copia del archivo original, sin modificar, de la [fuente oficial del Growth Lab](https://atlas.hks.harvard.edu/data-downloads/), y guardarlo en la carpeta `raw/`.
+
+En Google Colab, también se puede descargar automáticamente ejecutando script/00_descarga_base.R.
  
 ### Orden de ejecución
 Todos los scripts se corren desde la carpeta raíz del repositorio, en este orden. 
  
 | # | Script | Qué hace | Lee | Escribe |
 |---|---|---|---|---|
+| 0 | script/00_descarga_base.R | Descarga la base desde Drive a raw/ (opcional si ya se descargó a mano) | Drive | raw/ |
 | 1 | `script/01_preparacion.R` | Lee la base, renombra variables, calcula el RCA normalizado, recorta los 19 países de América Latina y arma la tabla país × región | `raw/` | `input/` |
 | 2 | `script/02_descriptivos.R` | Distribuciones de registros, comercio, RCA, PCI y distancia | `input/` | `output/graficos/s1_*` |
 | 3 | `script/03_faltantes_outliers.R` | Valores faltantes, ceros y outliers (IQR) | `input/` | `output/graficos/`, `output/tablas/s2_*` |
