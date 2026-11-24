@@ -47,7 +47,7 @@ tp-csdedatos/
 install.packages(c("dplyr", "readr", "tidyr", "ggplot2", "scales", "ggrepel",
                    "countrycode", "gridExtra", "ggtext"))
 ```
-Se usó R con estos paquetes; `grid` y `stats` vienen incluidos en R.
+El análisis se desarrolló en Google Colab, con R. Los scripts también se pueden correr en RStudio o en cualquier instalación de R; `grid` y `stats` vienen incluidos en R.
  
 ### Paso manual: descarga de la base
 
@@ -65,7 +65,9 @@ Todos los scripts se corren desde la carpeta raíz del repositorio, en este orde
 | 5 | `script/05_clustering.R` | Clustering de países por período (PCA + Ward.D2 + v-test) | `input/` | `input/resultados_cluster.rds`, `output/graficos/`, `output/tablas/s4_*` |
 | 6 | `script/06_graficos_presentacion.R` | Gráficos de la presentación | `input/` | `output/graficos/s2_*`, `s3_*`, `s4_*` |
 | 7 | `script/07_graficos_tp3.R` | Gráficos exploratorio y comunicativo de la 3.ª entrega (JPG) | `input/` | `output/graficos/grupo_19_*.jpg` |
- 
+
+Para correrlo en Colab: crear un notebook con entorno de ejecución R, clonar el repositorio (`!git clone https://github.com/jorgensenines/tp-csdedatos.git`), subir el CSV a `raw/` y ejecutar los scripts en orden desde la carpeta raíz del repo con `source("script/01_preparacion.R")`, y así con los demás.
+
 ## Conclusiones principales
 
 América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 6 de los 19 países contemplados exportan hoy con perfil manufacturero, 12 nunca lo hicieron y Panamá dejó de hacerlo en la década 2020-24. Estos resultados son consistentes con nuestra hipótesis de trabajo. 
