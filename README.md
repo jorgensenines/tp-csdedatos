@@ -68,4 +68,4 @@ Todos los scripts se corren desde la carpeta raíz del repositorio, en este orde
  
 ## Conclusiones principales
 
-América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 4 de los 19 países contemplados exportan hoy con perfil manufacturero, y 14 nunca lo hicieron. Estos resultados son consistentes con nuestra hipótesis de trabajo. 
+América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 6 de los 19 países contemplados exportan hoy con perfil manufacturero, y 12 nunca lo hicieron. Estos resultados son consistentes con nuestra hipótesis de trabajo. 
