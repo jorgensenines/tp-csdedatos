@@ -70,4 +70,4 @@ Para correrlo en Colab: crear un notebook con entorno de ejecución R, clonar el
 
 ## Conclusiones principales
 
-América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 6 de los 19 países contemplados exportan hoy con perfil manufacturero, 12 nunca lo hicieron y Panamá dejó de hacerlo en la década 2020-24. Estos resultados son consistentes con nuestra hipótesis de trabajo. 
+América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 6 de los 19 países contemplados exportan hoy con perfil manufacturero, 12 nunca lo hicieron y Panamá dejó de hacerlo en la década 2020-24. Estos resultados son consistentes con nuestra hipótesis de trabajo, pero el análisis es simplemente descriptivo, no podemos determinar las causas de las estructuras exportadoras latinoamericanas. 
