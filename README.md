@@ -40,26 +40,32 @@ tp-csdedatos/
 ├── utils/            # Funciones propias
 └── README.md
 ```
-
-## Reproducción:
-
+## Reproducción
+ 
 ### Paquetes necesarios
-
 ```r
-install.packages(c("tidyverse", "scales", "ggrepel"))
+install.packages(c("dplyr", "readr", "tidyr", "ggplot2", "scales", "ggrepel",
+                   "countrycode", "gridExtra", "ggtext"))
 ```
+Se usó R con estos paquetes; `grid` y `stats` vienen incluidos en R.
+ 
+### Paso manual: descarga de la base
 
-### Paso manual
-
-1. Descargar la base sitc_country_product_year_4.csv desde [este link](https://atlas.hks.harvard.edu/data-downloads/).
-2. Guardarlo en la carpeta `raw/` con el nombre `sitc_country_product_year_4.csv`.
-
+La base es demasiado grande para subirla a GitHub (521,9 MB). Descargar el archivo `sitc_country_product_year_4.csv` desde [este link de Drive](https://drive.google.com/file/d/1l6mz0B7js6X0esEcms8PTiFkLuNlFt4v/view?usp=drive_link), que es una copia del archivo original, sin modificar, de la [fuente oficial del Growth Lab](https://atlas.hks.harvard.edu/data-downloads/), y guardarlo en la carpeta `raw/`.
+ 
 ### Orden de ejecución
-
-1. `script/01_...R` — _qué hace_
-2. `script/02_...R` — _qué hace_
-3. `script/03_...R` — _qué hace_
-
+Todos los scripts se corren desde la carpeta raíz del repositorio, en este orden. 
+ 
+| # | Script | Qué hace | Lee | Escribe |
+|---|---|---|---|---|
+| 1 | `script/01_preparacion.R` | Lee la base, renombra variables, calcula el RCA normalizado, recorta los 19 países de América Latina y arma la tabla país × región | `raw/` | `input/` |
+| 2 | `script/02_descriptivos.R` | Distribuciones de registros, comercio, RCA, PCI y distancia | `input/` | `output/graficos/s1_*` |
+| 3 | `script/03_faltantes_outliers.R` | Valores faltantes, ceros y outliers (IQR) | `input/` | `output/graficos/`, `output/tablas/s2_*` |
+| 4 | `script/04_kruskal_regiones.R` | Test de Kruskal-Wallis (y ANOVA de referencia) de la complejidad de la especialización por región, con post-hoc de Holm | `input/` | `output/graficos/`, `output/tablas/s3_*` |
+| 5 | `script/05_clustering.R` | Clustering de países por período (PCA + Ward.D2 + v-test) | `input/` | `input/resultados_cluster.rds`, `output/graficos/`, `output/tablas/s4_*` |
+| 6 | `script/06_graficos_presentacion.R` | Gráficos de la presentación | `input/` | `output/graficos/s2_*`, `s3_*`, `s4_*` |
+| 7 | `script/07_graficos_tp3.R` | Gráficos exploratorio y comunicativo de la 3.ª entrega (JPG) | `input/` | `output/graficos/grupo_19_*.jpg` |
+ 
 ## Conclusiones principales
 
 América Latina tiene ventajas comparativas concentradas en recursos naturales y poca presencia en productos complejos. Solo 4 de los 19 países contemplados exportan hoy con perfil manufacturero, y 14 nunca lo hicieron. Estos resultados son consistentes con nuestra hipótesis de trabajo. 
